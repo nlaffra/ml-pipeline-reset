@@ -78,10 +78,8 @@ def save_model(model, path):
     """
     print("PICKLES")
     print(path)
-    save = pickle.dump(model,open(path, "ab"))
-    print(save)
-    return save
-    #pass
+    pickle.dump(model,open(path, "ab"))
+    pass
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
