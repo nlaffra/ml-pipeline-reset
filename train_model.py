@@ -23,7 +23,9 @@ data = pd.read_csv(data_path)
 train, test = train_test_split(data,
                                test_size=0.20
                               )
-print("LINE 26: " + train)
+print("LINE 26: ", end ="|")
+print(train)
+print("|")
 print("LINE 27: " + test)
 
 # DO NOT MODIFY
