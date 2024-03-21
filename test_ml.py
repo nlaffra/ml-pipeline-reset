@@ -42,20 +42,26 @@ def train_dataset(data, features):
                                         )
     return X_train, y_train
     
-def test_is_model():
+def test_import_data(path):
     """
-    Check saved model exists
+    Check that data is present and shape of file
     """
-    savepath = "./model/model.pkl"
-    if os.path.isfile(savepath):
-        try:
-            _ = pickle.load(open(savepath, 'rb'))
-        except Exception as err:
-            logging.error(
-            "Testing saved model: Invalid saved model")
-            raise err
-    else:
-        pass
+    try:
+        df = pd.read_csv(path)
+
+    except FileNotFoundError as err:
+        logging.error("File not found")
+        raise err
+
+    # Check the df shape
+    try:
+        assert df.shape[0] > 0
+        assert df.shape[1] > 0
+
+    except AssertionError as err:
+        logging.error(
+        "Testing import_data: The file doesn't appear to have rows and columns")
+        raise err
 
 def test_features(data, features):
     """
