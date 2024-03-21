@@ -115,6 +115,9 @@ print("model (loaded): ", end="|")
 print(model)
 print("|")
 
+print("X_test again")
+print(X_test)
+
 # TODO: use the inference function to run the model inferences on the test dataset.
 preds = inference(model, X_test)
 
