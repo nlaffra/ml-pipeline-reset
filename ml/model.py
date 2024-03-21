@@ -86,10 +86,11 @@ def load_model(path):
     print("PICKLES_LOAD")
     #print(path)
     #send = pickle.load(open(path,"rb"))
-    send = pickle.load(path)
-    print(send)
-    return send
-    #pass
+    #pickle.load(path)
+    #print(send)
+    #return send
+    pickle.load(open(path,"rb"))
+    pass
 
 
 def performance_on_categorical_slice(
