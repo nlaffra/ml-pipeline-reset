@@ -85,8 +85,8 @@ def load_model(path):
     """ Loads pickle file from `path` and returns it."""
     print("PICKLES")
     print(path)
-    send = pickle.load(open(path,"rb"))
-    #send = pickle.load(path)
+    #send = pickle.load(open(path,"rb"))
+    send = pickle.load(path)
     print(send)
     return send
     #pass
