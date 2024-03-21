@@ -26,7 +26,9 @@ train, test = train_test_split(data,
 print("LINE 26: ", end ="|")
 print(train)
 print("|")
-print("LINE 27: " + test)
+print("LINE 29: ", end ="|")
+print(test)
+print("|")
 
 # DO NOT MODIFY
 cat_features = [
@@ -48,7 +50,16 @@ X_train, y_train, encoder, lb = process_data(
     training=True
     )
 
-print("X_train: " + X_train + ", y_train: " + y_train + ", encoder: " + encoder + ", lb: ")
+print("Train parameters: ", end="|")
+print("X_train: ")
+print(X_train)
+print(", y_train: ")
+print(y_train)
+print(", encoder: ")
+print(encoder)
+print(", lb: ")
+print(lb)
+print("|")
 
 X_test, y_test, _, _ = process_data(
     X = test,
@@ -59,12 +70,19 @@ X_test, y_test, _, _ = process_data(
     lb=lb,
 )
 
-print("X_test: " + X_test + ", y_test: " + y_test)
+print("Test parameters: ", end="|")
+print("X_test: ")
+print(X_test)
+print(", y_test: ")
+print(y_test)
+print("|")
 
 # TODO: use the train_model function to train the model on the training dataset
 model = train_model(X_train, y_train)
 
-print("model: " + model)
+print("model: ", end="|")
+print(model)
+print("|")
 
 # save the model and the encoder
 model_path = os.path.join(project_path, "model", "model.pkl")
