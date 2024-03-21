@@ -109,7 +109,7 @@ print(encoder)
 print("|")
 
 # load the model
-model = load_model(model_path)
+load_model(model_path)
 
 print("model (loaded): ", end="|")
 print(model)
