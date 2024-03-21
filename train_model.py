@@ -110,8 +110,8 @@ print("|")
 
 # load the model
 model = load_model(
-    model_path
-    #modelobj
+    #model_path
+    modelobj
 )
 
 print("model (loaded): ", end="|")
