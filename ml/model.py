@@ -76,7 +76,10 @@ def save_model(model, path):
     path : str
         Path to save pickle file.
     """
+    print("PICKLES")
+    print(path)
     save = pickle.dump(model,open(path, "ab"))
+    print(save)
     return save
     #pass
 
