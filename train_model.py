@@ -23,6 +23,9 @@ data = pd.read_csv(data_path)
 train, test = train_test_split(data,
                                test_size=0.20
                               )
+print("LINE 26: " + train)
+print("LINE 27: " + test)
+
 # DO NOT MODIFY
 cat_features = [
     "workclass",
@@ -43,6 +46,8 @@ X_train, y_train, encoder, lb = process_data(
     training=True
     )
 
+print("X_train: " + X_train + ", y_train: " + y_train + ", encoder: " + encoder + ", lb: ")
+
 X_test, y_test, _, _ = process_data(
     X = test,
     categorical_features=cat_features,
@@ -52,8 +57,12 @@ X_test, y_test, _, _ = process_data(
     lb=lb,
 )
 
+print("X_test: " + X_test + ", y_test: " + y_test)
+
 # TODO: use the train_model function to train the model on the training dataset
 model = train_model(X_train, y_train)
+
+print("model: " + model)
 
 # save the model and the encoder
 model_path = os.path.join(project_path, "model", "model.pkl")
