@@ -141,7 +141,9 @@ for col in cat_features:
             slicevalue,
             cat_features,
             "salary",
-            model = model
+            encoder,
+            lb,
+            model
         )
         with open("slice_output.txt", "a") as f:
             print(f"{col}: {slicevalue}, Count: {count:,}", file=f)
