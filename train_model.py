@@ -92,7 +92,6 @@ print(model_path)
 print("|")
 
 save_model(model, model_path)
-modelobj = open(model_path,"rb")
 
 print("model (updated): ", end="|")
 print(model)
@@ -110,10 +109,7 @@ print(encoder)
 print("|")
 
 # load the model
-model = load_model(
-    #model_path
-    modelobj
-)
+model = load_model(model_path)
 
 print("model (loaded): ", end="|")
 print(model)
