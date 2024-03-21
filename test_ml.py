@@ -8,6 +8,10 @@ def data():
     # Fixture - returns dataset 
     datapath = "./data/census.csv"
     return pd.read_csv(datapath)
+    
+@pytest.fixture(scope="module")
+def path():
+    return "./data/census.csv"
 
 @pytest.fixture(scope="module")
 def features():
