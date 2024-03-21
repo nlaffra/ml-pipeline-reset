@@ -91,7 +91,8 @@ print("model_path: ", end="|")
 print(model_path)
 print("|")
 
-modelobj = save_model(model, model_path)
+save_model(model, model_path)
+modelobj = open(model_path,"rb")
 
 print("model (updated): ", end="|")
 print(model)
@@ -102,7 +103,7 @@ print("encoder_path: ", end="|")
 print(encoder_path)
 print("|")
 
-encoderobj = save_model(encoder, encoder_path)
+save_model(encoder, encoder_path)
 
 print("encoder (updated): ", end="|")
 print(encoder)
