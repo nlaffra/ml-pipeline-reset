@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
-
+from sklearn.ensemble import RandomForestClassifier
 from ml.data import process_data
 from ml.model import (
     compute_model_metrics,
@@ -12,6 +12,7 @@ from ml.model import (
     save_model,
     train_model,
 )
+model = RandomForestClassifier()
 # TODO: load the census.csv data
 project_path = "/home/nlaffra/ml-pipeline-reset"
 data_path = os.path.join(project_path, "data", "census.csv")
