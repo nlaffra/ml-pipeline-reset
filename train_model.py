@@ -86,17 +86,42 @@ print("|")
 
 # save the model and the encoder
 model_path = os.path.join(project_path, "model", "model.pkl")
+print("model_path: ", end="|")
+print(model_path)
+print("|")
+
 save_model(model, model_path)
+
+print("model (updated): ", end="|")
+print(model)
+print("|")
+
 encoder_path = os.path.join(project_path, "model", "encoder.pkl")
+print("encoder_path: ", end="|")
+print(encoder_path)
+print("|")
+
 save_model(encoder, encoder_path)
+
+print("encoder (updated): ", end="|")
+print(encoder)
+print("|")
 
 # load the model
 model = load_model(
     model_path
-) 
+)
+
+print("model (loaded): ", end="|")
+print(model)
+print("|")
 
 # TODO: use the inference function to run the model inferences on the test dataset.
 preds = inference(model, X_test)
+
+print("preds: ", end="|")
+print(preds)
+print("|")
 
 # Calculate and print the metrics
 p, r, fb = compute_model_metrics(y_test, preds)
