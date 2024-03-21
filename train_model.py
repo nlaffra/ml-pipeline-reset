@@ -143,7 +143,7 @@ for col in cat_features:
             label = "salary",
             encoder = encoder,
             lb = lb, 
-            model = model
+            model = model,
             training = False
         )
         with open("slice_output.txt", "a") as f:
