@@ -132,7 +132,7 @@ def performance_on_categorical_slice(
     """
     X_slice, y_slice, _, _ = process_data(data, column_name, slice_value,
                                           categorical_features, label, encoder, lb,
-                                          model, False)
+                                          model)
     preds = inference(model, X_slice)
     precision, recall, fbeta = compute_model_metrics(y_slice, preds)
     return precision, recall, fbeta
