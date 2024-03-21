@@ -91,7 +91,7 @@ print("model_path: ", end="|")
 print(model_path)
 print("|")
 
-save_model(model, model_path)
+modelobj = save_model(model, model_path)
 
 print("model (updated): ", end="|")
 print(model)
@@ -102,7 +102,7 @@ print("encoder_path: ", end="|")
 print(encoder_path)
 print("|")
 
-save_model(encoder, encoder_path)
+encoderobj = save_model(encoder, encoder_path)
 
 print("encoder (updated): ", end="|")
 print(encoder)
@@ -110,7 +110,8 @@ print("|")
 
 # load the model
 model = load_model(
-    model_path
+    #model_path
+    modelobj
 )
 
 print("model (loaded): ", end="|")
