@@ -53,7 +53,7 @@ async def greetings():
 
 # TODO: create a POST on a different path that does model inference
 @app.post("/data/")
-async def post_inference(data: Data):
+async def post_inference(data = Data):
     # DO NOT MODIFY: turn the Pydantic model into a dict.
     data_dict = data.dict()
     # DO NOT MODIFY: clean up the dict to turn it into a Pandas DataFrame.
